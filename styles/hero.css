@@ -222,3 +222,116 @@ section.hero {
     transform: translateY(-15rem);
   }
 }
+
+@media (max-width: 450px) {
+  header.top {
+    width: 100%;
+    padding-inline: 1.5rem;
+  }
+
+  section.hero {
+    max-width: 30rem;
+    width: 100%;
+    padding-inline: 1.5rem;
+    flex-direction: column-reverse;
+
+    & > div:nth-child(2) {
+      height: 19.5rem;
+      margin-bottom: 4rem;
+    }
+
+    & h1 {
+      font-size: 2rem;
+      width: 90%;
+
+      & div {
+        height: 2.5rem;
+        border: 1px solid rebeccapurple;
+
+        & span {
+          height: 2.5rem;
+          display: block;
+          animation: slideUpMobile 5s 2s infinite ease;
+        }
+      }
+    }
+
+    & .buttons {
+      flex-direction: column-reverse;
+    }
+  }
+
+  @keyframes slideUpMobile {
+    0%,
+    22% {
+      transform: translateY(0);
+    }
+
+    /* divertida in */
+    23% {
+      transform: translateY(calc(-2.5rem - 7px));
+    }
+
+    25% {
+      transform: translateY(calc(-2.5rem + 5px));
+    }
+
+    27% {
+      transform: translateY(calc(-2.5rem - 3px));
+    }
+
+    29% {
+      transform: translateY(calc(-2.5rem + 3px));
+    }
+
+    /* divertida static */
+    33%,
+    55% {
+      transform: translateY(-2.5rem);
+    }
+
+    /* saudável in */
+    56% {
+      transform: translateY(calc(-5rem - 7px));
+    }
+
+    58% {
+      transform: translateY(calc(-5rem + 5px));
+    }
+
+    60% {
+      transform: translateY(calc(-5rem - 3px));
+    }
+
+    62% {
+      transform: translateY(calc(-5rem + 3px));
+    }
+
+    /* saudável static */
+    66%,
+    88% {
+      transform: translateY(-5rem);
+    }
+
+    /* radical in */
+    89% {
+      transform: translateY(calc(-7.5rem - 7px));
+    }
+
+    91% {
+      transform: translateY(calc(-7.5rem + 5px));
+    }
+
+    93% {
+      transform: translateY(calc(-7.5rem - 3px));
+    }
+
+    95% {
+      transform: translateY(calc(-7.5rem + 3px));
+    }
+
+    100% {
+      transform: translateY(-7.5rem);
+    }
+  }
+}

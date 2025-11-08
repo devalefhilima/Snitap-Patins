@@ -99,3 +99,15 @@ footer {
     }
   }
 }
+
+@media (max-width: 450px) {
+  & footer {
+    flex-direction: column;
+    align-items: start;
+    gap: 3rem;
+
+    & nav {
+      flex-direction: column;
+    }
+  }
+}
